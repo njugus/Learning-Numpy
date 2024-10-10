@@ -52,3 +52,16 @@ empty_array = np.empty(2)
 range_array = np.arange(5)
 print(range_array)
 
+# as you create this arrays remember, the default data type is always float64(thats why you see a decimal after the
+# value)
+# you can specify your own datatype
+ones_array = np.ones(2, dtype=int)
+print(ones_array)
+
+# printing arrays
+# 1-D arrays
+numbers_arrays = np.arange(12)
+
+# printing 2-D arrays
+new_array = np.arange(12).reshape(4, 3)
+print(new_array)
