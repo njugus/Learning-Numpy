@@ -33,7 +33,6 @@ except  IndexError as error:
 finally:
     print("Execution successfully")
 
-
 # how to create a basic array
 # we use various methods to create arrays
 # create an array filled with 0s
@@ -41,7 +40,6 @@ zero_array = np.zeros(3)
 
 # create an array filled with ones
 one_array = np.ones(3)
-
 
 # create an empty array - fast way
 # fill every element later
@@ -65,3 +63,14 @@ numbers_arrays = np.arange(12)
 # printing 2-D arrays
 new_array = np.arange(12).reshape(4, 3)
 print(new_array)
+
+# Reshaping Arrays
+# you can change the shape of an array using the reshape()
+# but remember, the reshaped array should have similar number of items as the original array
+# e.g if the origonal array has 12 items, similary the reshaped array should also have 12 items
+# To reshape a 1D array of 7 elements, you need to reshape it into shapes that multiply to 7
+original_array = np.empty(7, dtype=int)
+original_array[:] = [10, 20, 30, 40, 50, 60, 70]
+
+reshaped_array = original_array.reshape((1, 7))
+reshaped_array_two = original_array.reshape((7, 1))
